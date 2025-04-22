@@ -2,7 +2,7 @@
 
 Elpotimeraren aim to be a solution that helps households and businesses lower their electricity costs and reduce their environmental impact by using electricity more efficiently. It does this by leveraging open and free APIs. The goal is to provide a foundation for further discussion in a technical case.
 
-## Architecture
+## Implemented Architecture
 Below we have a sketch of what is implemented thusfar in this project.
 ![Abstract architecture sketch of implementation](img_1.png)
 
@@ -139,3 +139,25 @@ to something that runs more frequently, like every 2 minutes:
 ```java
 @Scheduled(fixedRate = 1000*120)
 ```
+
+## Complete Architecture
+Below we have a sketch of how the implemented solution would look like in a more complete and scalable manner. I have chosen AWS as an example of how to utilize cloud services to implement the following architectural components.
+![img.png](img.png)
+
+### Additions and Differences
+- Convert fetcher- and datanormalizer-services to scheduled AWS Lambdas (or similar).
+- Deploy image of Business Logic service to ECS container and replicate across multiple Availability Zones.
+- Host PSQL-DB using AWS RDS.
+- Include Load Balancer through services such as AWS ALB.
+- Set rate limiting (such as leaky-bucket) through service such as AWS WAF.
+- Include shared modules through publishing it as a packet in AWS CodeArtifact or similar.
+
+### Future development
+- Include more data types (weather)
+- Forecasting service
+- Recommendation Engine
+- Notification Service
+- Authentication
+- Billing/Premium
+- UI
+- Health Checks + Alerting
