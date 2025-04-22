@@ -1,6 +1,6 @@
 ## Elpotimeraren
 
-Elpotimeraren aim to be a solution that helps households and businesses lower their electricity costs and reduce their environmental impact by using electricity more efficiently. It does this by leveraging open and free APIs. The goal is to provide a foundation for further discussion in a technical case.
+Elpotimeraren aims to be a solution that helps households and businesses lower their electricity costs and reduce their environmental impact by using electricity more efficiently. It does this by leveraging open and free APIs. The goal is to provide a foundation for further discussion in a technical case.
 
 ## Implemented Architecture
 Below we have a sketch of what is implemented thusfar in this project.
